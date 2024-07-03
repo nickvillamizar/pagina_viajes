@@ -1,0 +1,141 @@
+*
+{
+margin:0;/* quita las margenes por defecto */
+padding:0; /* quita el relleno que se crea entre los elementos*/
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* fuentes de texto*/
+box-sizing: border-box; /* establece el alto y ancho de total del contenedor a su contenido */
+}
+.container /* hace referencia al div con la clase container */
+{
+width: 100%; /* establece el ancho en pixeles o porcentaje */
+height: 100%; /* Establece el alto en pixeles o porcentaje */
+background: #AED6F1; /*color de fondo de la pantalla del container ppal*/
+display:flex; /*permite alinear los elementos en una fila o columna*/
+align-items: center; /* alinea verticalmente los items dentro del container */
+justify-content: center; /* justifica horizontalmente los items dentro del container */
+}
+.imagen /* hace referencia al div con la clase imagen */
+{
+width: 40%; /*cambia tamaño de la imagen*/
+}
+.cajaimagen /* aplica estilo al div cajaimagen */
+{
+width: 50%; /* establece el ancho de la caja donde va la imagen */
+height: 100%; /* establece el alto de la caja donde va la imagen */
+display:flex; /*permite alinear los items en cajaimagen*/
+flex-direction: column; /*coloca los item en vertical como en columna, para cuando se cambie el tamaño de la 
+pagina se ajuste*/
+align-items: center; /*alinea los item en la cajaimagen */
+justify-content: center; /* justifica todo lo que hay en cajaimagen*/
+margin-bottom: 80px; /*Margen inferior en pixels*/
+}
+.areasesion /* aplica estilo a la cajadiv areasesion */
+{
+width: 50%; /* establece el ancho de la caja areasesion en porcentaje */
+height: 100%; /* Establece el alto de la caja areasesion en pixeles o porcentaje */
+display: flex; /*permite alinear los items en areasesion*/
+align-items: center; /* alinea los item del areasesion */
+justify-content: center; /* justifica todo el contenido que hay en el areasesion */
+margin-top: 40px; /* Margen superior en pixels */
+margin-bottom: 40px; /* margen inferior en pixels */
+}
+.iniciosesion /* aplica estilo al div iniciosesion */
+{
+width: 60%;/* Establece el ancho del div iniciosesion en pixeles o porcentaje */
+display: flex; /* Permite alinear los items en iniciosesion */
+align-items: center; /* alinea los item de iniciosesion */
+justify-content: center; /* Justifica todo el contenido que hay en iniciosesion */
+flex-direction: column; /* coloca los elementos en columnas */
+background: #45B39D ; /* color de fondo para el iniciosesion*/
+padding:40px 45px; /*tamaño de la caja de inicio de sesión*/
+border-radius: 15px; /* Redondea las esquinas del iniciosesion */
+box-shadow: 0px 10px 40px blue; /*sombra de la caja de sesion*/
+}
+.iniciosesion >h1 /*modifica unicamente lo que esta en h1*/
+{
+color:yellow; /* aplica color amarillo al texto del titulo */
+margin:0; /* coloca las margenes a cero */
+}
+.entradatxtusuario /* modifica el input de usuario */
+{
+width: 100%; /* establece el ancho del div entrada de txtusuario en % */
+display: flex; /* permite alinear los items en entrada de txtusuario */
+flex-direction: column; /*coloca los elementodelos inputs en columnas */
+justify-content: center; /* Justifica todo el contenido que hay en entrada de txtusuario */
+margin: 10px 0px; /*separa las cajas de texto de usuario y contraseña*/
+}
+.entradatxtusuario >input /*modifica unicamente las cajas de textos de usuario y contraseña*/
+{
+width: 100%; /* establece el ancho del input en % */
+border:none; /*quita el borde del input*/
+border-radius: 10px; /* redondea los bordes del input */
+padding:15px; /*espacio entre el texto y el borde del input*/
+background: #D4E6F1; /* aplica fondo al input */
+color:black; /*color del texto que digita en las cajas*/
+font-size: 14px; /*tamaño del texto*/
+outline:none; /*quita el borde las cajas*/
+box-sizing: border-box; /*alinea las cajas de acuerdo al container actual*/
+box-shadow: 0px 0px 20px blue; /* 0 de iz a der, 10 de abajo arriba 40 der a izq*/
+}
+.entradatxtusuario >label /*modifica unicamente los label de usuario y contraseña*/
+{
+color:#154360; /* aplica color azul oscuro al label*/
+margin-bottom: 10px; /*modifica margen o distancia entre label y las cajas de texto*/
+}
+.boton /* modifica solo el boton Ingresar */
+{
+width: 100%; /*cambia tamaño al boton*/
+margin:25px; /*margen entre la caja de texto y el boton*/
+padding: 16px 0px; /* Aplica relleno a los lados del boton */
+border:none; /* Quita el borde del boton */
+border-radius: 13px; /* redondea los angulos del boton */
+outline:none; /*quita el borde del boton*/
+cursor:pointer; /*muestra la manito del cursor*/
+font-size: 16px; /* tamaño del texto del boton*/
+background: #DC7633; /*cambia el color al boton*/
+color:#5B2C6F; /*cambia color al texto INICIAR*/
+box-shadow: 0px 0px 20px red; /* Aplica sombra al boton */
+}
+.boton:hover /* Animacion cuando se pasa por encima del boton */
+{
+filter:invert(1); /*aplica una inversión de colores al pasar por encima*/
+transition: all 1s; /*aplica 1 segundo en la transición*/
+}
+.cajaimagen >h1 /* modifica solo el titulo de la imagen del div cajaimagen */
+{
+font-size: 40px; /* Cambia el tamano del titulo */
+}
+.iniciosesion >h4 a /*hace referencia a la etiqueta h4 a*/
+{
+color:white; /*cambia color al link registrate*/
+text-decoration: none; /*eliminar underline de links*/
+}
+/*para aplicar responsive se debe tomar cada elemento*/
+/*se debe abrir la pagina a la cual se le aplicara el responsive, y dar clic cerecho en inspeccionar
+buscar el boton que esta al lado derecho de elements marcarlo y luego cambiar la dimensiones para definir el width 
+(650)*/
+@media only screen and (max-width:650px) /*verifica que no exceda el tamaño de la pagina para aplicar responsive*/
+{
+.container /*es el div para aplicar responsive*/
+{
+flex-direction: column; /*muestra el contenido hacia abajo, columnas*/
+}
+.cajaimagen >h1
+{
+display:none; /* No muestra el titulo del div cajaimagen si no es responsivo*/
+}
+.cajaimagen
+{
+width:100%; /*conserve el ancho*/
+height: auto; /*alto automatico*/
+}
+.imagen /*para bajar un poco de la imagen del esncabezado*/
+{
+margin-top: 45px; /* margen superior para que quede bien*/
+}
+.iniciosesion /* aplica responsive a los elementos dentro de iniciosesion */
+{
+width: auto; /* ancho automático*/
+height: auto; /* alto automático*/
+}
+}

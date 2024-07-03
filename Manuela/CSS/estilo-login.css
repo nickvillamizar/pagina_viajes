@@ -1,0 +1,172 @@
+*
+{
+    margin:0;
+    padding:0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box; /*establece el ancho y alto total*/
+    
+    
+}
+
+.container
+{
+    width: 100vw; /* ancho del contenedor en funcion de la ventana visual*/
+    height: 100vh; /* altura del contenedor en funcion de la ventana visual*/
+    background-image: url(../Imagenes/Cartagena1.jpeg); 
+    background-repeat: no-repeat;/*color de fondo de la pantalla del container ppal*/
+    background-size: 100% 700px;
+    display: flex; /*permite alinear los elementos en una fila o columna*/
+    align-items: center; /*centra verticalmente todos los items dentro del container*/
+    justify-content: center; /* centra horizontalmente todos los items dentro del container*/
+}
+
+.imagen 
+{
+    width: 60%; /*cambia tamaño de la imagen*/
+    filter:drop-shadow(0 0 10px blue );/*agrega sombre a la imagen*/
+}
+
+.cajaimagen
+{
+    width: 50%;/*asigna un ancho fijo a la caja que contiene la imagen*/
+    height: 100%;/*asigna una altura relativa al contenedor principal*/
+    display:flex; /*permite alinear los items en cajaimagen*/
+    flex-direction: column; /*coloca los item en vertical como en columna, para cuando se cambie 
+    el tamaño de la pagina se ajuste */
+    align-items: center; /*centra horizontalmente las imagenes*/
+    justify-content: center;/* centra verticalmente las imagenes*/
+}
+
+.areasesion
+{
+    width: 50%;/* asigna un ancho a la caja que contiene el formulario*/
+    height: 100%;/*asigna una altura al contenedor principal*/
+    display:flex;/*permite alinear los items en areasesion*/
+    align-items: center;/*centra verticalmente todo lo que hay en areasesion*/
+    justify-content: center;/* justifica todo lo que hay en areasesion*/
+}
+
+
+.iniciosesion >h1 /*modifica unicamente lo que esta en h1*/
+{
+    color:#FDFEFE;/*color del texto del titulo*/
+    margin:0;/* quita el margen inferior del titulo*/
+}
+
+
+.iniciosesion >h3 {/*modifica unicamente lo que esta en h2*/
+    color:#FDFEFE;
+    margin:0;
+}
+
+.entradatxtusuario
+{
+    width: 100%;/* asigna el ancho completo a entrada de usuario*/
+    display:flex;/*agruo los dos input de usuario y contraseña en un solocontenedor*/
+    flex-direction: column;/*coloca los input uno debajo del otro*/
+    justify-content: center;/*justifica todo lo que hay en entraddatxtusuario*/
+    margin:10px 0px;/*separa las cajas de texto de usuario y contraseña*/
+}
+
+.entradatxtusuario >input/*modifica unicamente las cajas de textos de usuario y contraseña*/
+{
+    width: 100%;/*asigna el ancho completo a cada input*/
+    border: none;/*quita el borde al input*/
+    border-radius: 10px;/*redondea los bordes del input*/
+    padding: 15px; /*espacio entre el texto y el borde del input*/
+    background: #D4E6F1;
+    color: black;/*color del texto que digita en las cajas*/
+    font-size: 14px;/*tamaño del texto*/
+    outline: none;/*quita el borde de las cajas*/
+    box-sizing: border-box;/*alinea las cajas de acuerdo al container actual*/
+    box-shadow: 0pc 0px 20px #ec9006; /*0 de iz a der, 10 de abajo arriba 40 der a izq*/
+}
+
+.entradatxtusuario >label /* modifica unicamente los label de usuario y contraseña*/
+{
+    color:#FDFEFE;/*color del texto de label*/
+    margin-bottom: 10px;/* modifica margen o distancia entre label y las cajas de texto*/
+}
+
+.boton
+{
+    width: 60%; /*cambia tamaño al boton*/
+    margin: 25px;/*margen entre la caja de texto y el boton*/
+    padding: 16px 0px;/*agrga espacio entre el texto y los lados del boton*/
+    border: none;/*quita el borde del boton*/
+    border-radius: 13px;/* redondea los angulos del boton*/
+    outline: none;/*quita el borde del boton*/
+    cursor: pointer;/*muestra la manito del cursor*/
+    font-size: 16px;/*cambia el tamaño del texto del boton*/
+    background: #f8cd8d;/*cambia el color al boton*/
+    color:#ffffff; /* cambia color al texto INICIAR*/
+    box-shadow: 0px 0px 20px #ec9006;/* sombra al pasar por encima del boton*/
+}
+
+.boton:hover /* cambios cuando se pasa el mouse por encima*/
+{
+    
+    transition: all 1s;/* aplica 1 segundo en la transicion*/
+    background-color: #ec9006;
+  
+}
+
+.cajaimagen >h1 /*agrega titulo a la imagen*/
+{
+    font-size: 40px;/*cambia el tamaño del titulo*/
+}
+
+.iniciosesion >h4 a /*hace referencia a la etiqueta h4 a*/
+{
+    color:rgb(255, 255, 255); /*cambia color al link registrate*/
+    text-decoration: none;/* eliminar underline de links*/
+    justify-content:center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.enviar
+{
+    text-align: center; 
+     
+}
+
+.enviar >h4 a
+{
+   
+    color:rgb(255, 255, 255); 
+}
+
+/*para aplicar resposive se debe tomar cada elemento*/
+/*se debe abrir la pagina a la cual se le aplicara el responsive, y dar clic derecho en 
+inspeccionar
+buscar el boton que esta al lado derecho de elements marcarlo y luego cambiar las dimensiones para
+ definir el width (650)*/
+
+ @media only screen and (max-width:650px)/*verifica que no exceda el tamaño de la pagina para
+  aplicar responsive*/
+  {
+    .container /*es el div para aplicar responsive*/
+    {
+    flex-direction: column;/*muestra el contenido hacia abajo, columnas*/
+    }
+    .cajaimagen >h1/*coloca el titulo debajo de la imagen */
+    {
+        display:none;/*oculta el titulo si es menorque 800 pixeles*/
+    }
+    .cajaimagen/*centra la imagen verticalmente y horizontalmente*/
+    {
+        width: 100%; /*conserve el ancho*/
+        height: auto ; /* alto automatico*/
+    }
+
+    .imagen/*para bajar un poco de la imagen del encabezado*/
+    {
+        margin-top: 45px; /* baja la imagen 45 pixeles*/
+    }
+    .iniciosesion/*centrada horizontalmente*/
+    {
+        width:auto;/* ancho automatico*/
+        height: auto; /* alto automatico*/
+    }
+  } 

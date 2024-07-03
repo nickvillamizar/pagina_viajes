@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #e99b09;
+    color: white;
+    padding: 10px 0;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menucontainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav.menu {
+    display: flex;
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li {
+    margin-left: 20px;
+}
+
+nav.menu ul li a {
+    color: white;
+    font-size: 1em;
+}
+
+/* Estilos para el cuerpo */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.sedes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.sede {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sede h2 {
+    color: #e99b09;
+    margin-bottom: 10px;
+}
+
+.sede p {
+    margin-bottom: 10px;
+}
+
+.sede img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #f78e05;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .piedepagina {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer .link {
+    text-align: left;
+    color: white;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer .redessociales {
+    display: flex;
+    gap: 10px;
+}
+
+footer .redessociales img {
+    width: 30px;
+    height: 30px;
+}

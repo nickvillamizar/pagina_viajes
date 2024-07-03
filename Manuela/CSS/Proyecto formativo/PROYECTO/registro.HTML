@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo-registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <form action="registro.php" method="POST"> 
+    <!-- asocia los elementos que estan contenidos en formulario
+    con las acciones en php, el metodo post es el que envia información a la base de datos -->
+    <div class="container"> <!--container la pag principal-->
+        <div class="cajaimagen"> <!--container imagen-->
+            <h1> Bienvenidos</h1>
+            <img src="imagenes/registro.png" class="imagen">
+        </div>
+
+        <div class="areasesion"> <!--container area de sesion -->
+            <div class="iniciosesion">
+                <h1>Iniciar Sesión</h1>
+                <div class="entradatxtusuario"> <!--container caja de texto para ingresar usuario -->
+                    <label>Usuario</label>
+                    <input type="text" name="nombre" required="obligatorio" placeholder="Usuario">
+                </div>
+                <div class="entradatxtusuario"> <!--container caja de texto para ingresar usuario y contraseña -->
+                    <label>Celular</label>
+                    <input type="tel" name="celular" required="obligatorio" placeholder="Celular">
+                </div>
+                <div class="entradatxtusuario"> <!--container caja de texto para ingresar usuario y contraseña -->
+                    <label>Correo</label>
+                    <input type="email" name="correo" required="obligatorio" placeholder="Correo">
+                </div>
+                <div class="entradatxtusuario"> <!--container caja de texto para ingresar usuario y contraseña -->
+                    <label>Contraseña</label>
+                    <input type="password" name="contraseña" required="obligatorio" placeholder="Contraseña">
+                </div>
+                <div class="entradatxtusuario"> <!--container caja de texto para ingresar usuario y contraseña -->
+                    <label>Contraseña</label>
+                    <input type="password" name="repcontraseña" required="obligatorio" placeholder="Repita Contraseña">
+                </div>
+                <input type="submit" class="boton" value="REGISTRAR" name="registrar"> <!--crea el boton registrar -->
+                <input type="reset" class="boton" value="RESTABLECER"> <!--crea el boton registrar -->
+                <h4><a href="Index.HTML">Ya tengo cuenta</a></h4> <!--crea el link de restablecer-->
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

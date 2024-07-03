@@ -1,0 +1,204 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+    text-decoration: none; /*elimina viñetas a los menus*/
+    list-style: none; /*elimina viñetas a los menus*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+    
+.encabezado /*modificar el area del encabezado*/
+{
+    background-color:#ffb74d; /*color del fondo area del menu Inicio, servicios y demas*/
+    padding: 32px 0; /*espacio superior e inferior del texto del encabezado*/
+}
+    
+.hambur
+{
+    width: 30px; 
+    filter:invert(1); /*invierte el color al pasar el mouse*/
+}
+.menucontainer
+{
+    /*background-color: greenyellow;*/
+    position: absolute;
+    top:0; /*margen superior*/
+    left:0; /*margen izquierda*/
+    right: 0; /*margen derecha*/
+    margin:0 auto; /*centra la barra de menu en horizontal */
+    display:flex; /*ubica los item (servicios, productos...)en columnas*/
+    align-items: center;
+    justify-content: space-between; /*espacio entre los items*/
+    z-index: 1000; /*menu aparezca sobre cualquier elemento*/
+    max-width: 1200px; /*para que no se desborde del tamaño de la pagina*/
+}
+.logo
+{
+    font-size: 24px;
+    color: white;
+    font-weight: 700; /*grosor a cada letra de la palabra menu*/
+    text-transform: uppercase; /*pasa a la mayuscula el texto*/
+    text-decoration: none;
+}
+.menu ul li /*aplica a ambas etiquetas*/
+{
+    position: relative;
+    float: left; /*ubica los textos en un solo renglón (inicio, servicios, productos...)*/
+}
+.menu ul li a
+{
+    color:white;
+    font-size: 18px;
+    padding: 20px; /*organiza el area de cada elemento (servicios, productos...)*/
+    display: block; /*ajusta el tamaño del bloque de acuerdo al container del mnenu*/
+    text-decoration: none;
+}
+.menu ul li a:hover /*da animación con una barra automatica a los menus*/
+{
+    text-decoration: underline;
+    color:#ef6c00;
+}
+#menuhamburguesa /*se llama con numeral ya que es un ID no es class*/
+{
+    display: none; /*oculta el checkbox*/
+}
+.menucontainer label
+{
+    display:none; /*oculta la imagen hamburguesa*/
+    cursor:pointer; /*cambia el cursor por un icono de mano cuando pasamos el raton*/
+}
+    /*organizar el responsive a continuación*/
+    @media(max-width:750px) /*si el ancho de pantalla es menor o */
+{
+.menucontainer /*todo lo que hay dentro del contenedor se aplica esto*/
+{
+    padding: 25px;
+}
+.menucontainer label
+{
+    display: initial; /*muestra la imagen en pantallas pequeñas*/
+    }
+.encabezado
+{
+    padding:50px 0;
+}
+.menucontainer .menu
+{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:#fb8c00; /*color de fondo*/
+    display:none; /*esconde todo lo que esta debajo al hacer click en la foto*/
+}
+.menucontainer .menu ul li
+{
+    width: 100%;
+}
+#menuhamburguesa:checked ~ .menu /*cuando esté activada la casilla "menuhamburguesa" muestra 
+    el menu lo despliega*/
+{
+    display:initial;
+}
+}
+    /*sigue los estilos para el contenido principal de esta pagina main inicio.html*/
+main h1 /*es una etiqueta global no requiere ni * ni # */
+{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight:600;
+    color:white
+}
+.imagen1 /*astronauta*/
+{
+    width: 100vw; /* ancho del contenedor en funcion de la ventana visual*/
+    height: 100vh; /* altura del contenedor en funcion de la ventana visual*/
+    background-image: url(../Imagenes/Salamina.jpeg); 
+    background-repeat: no-repeat;/*color de fondo de la pantalla del container ppal*/
+    background-size: 100% 700px;
+    display: flex; /*permite alinear los elementos en una fila o columna*/
+    align-items: center; /*centra verticalmente todos los items dentro del container*/
+    justify-content: center; /* centra horizontalmente todos los items dentro del container*/
+
+}
+.parrafo
+{
+    font-size: 20px;
+    text-align: justify;
+    padding:30px;
+}
+.menucontainer
+{
+    max-width: 1200px; /*no desborde de la pagina*/
+    margin:0 auto; /*centrado en la pantalla*/
+}
+footer
+{
+    background-color: #fb8c00; /*color de fondo del pie de pagina*/
+    padding: 20px 50px;
+}
+.piedepagina
+{
+    display: flex; /*queda en columnas compañia,tienda y demas*/
+    flex-wrap: wrap;
+}
+.link
+{
+    padding: 0 18px; /*modificando el area de los link*/
+    width: 25%;
+}
+.link >h4
+{
+    font-size: 20px;
+    color:white;
+    margin-bottom: 25px; /*margen inferior, separar los titulos de los demas link de cada columna*/
+    font-weight: 600; /*mas negrilla*/
+    border-bottom: 2px solid #F1C40F;
+    padding-bottom: 10px; /*separa la linea de los titulos*/
+    display:inline-block; /*define el largo de la linea de acuerdo al texto*/
+}
+.link ul li a
+{
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    display:block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.link ul li a:hover /*animación*/
+{
+    color:white;
+    padding-left: 5px; /*al ubicar el mouse cambia de color a blanco y se desplaza un poco a la 
+    derecha*/
+    transition: all .9s; /*tiempo de la animación*/
+}
+.redessociales a
+{
+    display: inline-block; /*muestra las redes sociales en una misma línea*/
+    min-height: 40px;
+    margin: 0 10px 10px 0; /*margenes sup, izq, dere, inf*/
+    text-align: center;
+}
+.redessociales a:hover
+{
+    filter: opacity(.3); /*opacidad del icono cuando pasa por encima*/
+}
+    @media (max-width:650px)/*responsive si es pantalla movil o tableta*/
+{
+.piedepagina
+{
+    text-align: center;
+}
+.link
+{
+    width: 100%;
+    margin-bottom: 25px;
+}
+}
+.areacarrusel
+{
+    width: auto;
+    height: auto;
+}

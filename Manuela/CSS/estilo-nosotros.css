@@ -1,0 +1,155 @@
+/* Estilos para el encabezado */
+header {
+    background-color: #e99b09;
+    color: white;
+    padding: 10px 0;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menucontainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#menuhamburguesa {
+    display: none;
+}
+
+label[for="menuhamburguesa"] {
+    display: none;
+    cursor: pointer;
+}
+
+.hambur {
+    width: 30px;
+    height: 30px;
+}
+
+nav.menu {
+    display: flex;
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li {
+    margin-left: 20px;
+}
+
+nav.menu ul li a {
+    color: white;
+    font-size: 1em;
+}
+
+/* Estilos para el cuerpo */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.nosotros-section {
+    margin: 20px 0;
+}
+
+.nosotros-content {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.nosotros-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.nosotros-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.address {
+    font-size: 1em;
+}
+
+/* Estilos para la imagen de nosotros */
+.imagen-nosotros {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.imagen-nosotros img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imagen-nosotros img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #f78e05;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .piedepagina {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer .link {
+    text-align: left;
+    color: white;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer .redessociales {
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+footer .redessociales img {
+    width: 30px;
+    height: 30px;
+}

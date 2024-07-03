@@ -1,0 +1,218 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #e99b09;
+    color: white;
+    padding: 10px 0;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menucontainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#menuhamburguesa {
+    display: none;
+}
+
+label[for="menuhamburguesa"] {
+    display: none;
+    cursor: pointer;
+}
+
+.hambur {
+    width: 30px;
+    height: 30px;
+}
+
+nav.menu {
+    display: flex;
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li {
+    margin-left: 20px;
+}
+
+nav.menu ul li a {
+    color: white;
+    font-size: 1em;
+}
+
+/* Estilos para el cuerpo */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.imagen1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de destinos */
+.destinos {
+    margin: 20px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para el párrafo */
+.parrafo {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
+}
+
+.redessociales > a
+{
+   
+    color: white;
+    
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #f78e05;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .piedepagina {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer .link {
+    text-align: left;
+    color: white;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer .redessociales {
+    display: flex;
+    gap: 10px;
+    color: white;
+    
+}
+
+footer .redessociales img {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav.menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    #menuhamburguesa:checked + label + nav.menu {
+        display: flex;
+    }
+
+    label[for="menuhamburguesa"] {
+        display: block;
+    }
+
+    .menucontainer {
+        flex-direction: column;
+    }
+
+    nav.menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.menu ul li {
+        margin: 10px 0;
+    }
+
+    footer .piedepagina {
+        flex-direction: column;
+        align-items: center;
+    }
+}
